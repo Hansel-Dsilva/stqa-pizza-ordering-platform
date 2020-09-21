@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="2.xsl"?>
+<branch>
+	<place>
+		<no>1</no>
+		<pincode>21143</pincode>
+		<mobileno>908765234</mobileno>
+		<name>Pune</name>
+	</place>
+	<place>
+		<no>2</no>
+		<pincode>21145</pincode>
+		<mobileno>908765233</mobileno>
+		<name>Delhi</name>
+	</place>
+	        <no>3</no>
+		<pincode>21146</pincode>
+		<mobileno>908765232</mobileno>
+		<name>Mumbai</name>
+	<place>
+		
+	</place>
+</branch>
+	
