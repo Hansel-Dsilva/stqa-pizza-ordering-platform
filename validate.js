@@ -1,4 +1,4 @@
-function myfunc() {
+function validation() {
   var user_name = document.myform.name.value;
   var user_email = document.myform.email.value;
   var user_address = document.myform.address.value;

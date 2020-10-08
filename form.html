@@ -1,7 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-<script src="validate.js" type="text/javascript"></script>
+<script >
+  function validation() {
+  var user_name = document.myform.name.value;
+  var user_email = document.myform.email.value;
+  var user_address = document.myform.address.value;
+  var user_mobile = document.myform.mobile.value;
+  var user_paymode = document.myform.mode.value;
+
+  var exp_phoneno = /^\d{10}$/;
+  var exp_email = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+  if (user_name == "") {
+    alert("please enter your name");
+  } else if (exp_email.test(user_email) == false) {
+    alert("please enter your correct email address");
+  } else if (user_address == "") {
+    alert("please enter your address");
+  } else if (exp_phoneno.test(user_mobile) == false) {
+    alert("please enter your correct mobile number");
+  } else if (user_paymode == "") {
+    alert("please enter your payment mode");
+  } else {
+    alert("Thank you for visiting our website...Visit Again!!");
+  }
+}
+</script>
 
 <style>
 body {
@@ -13,24 +38,24 @@ body {
 </style>
 </head>
 <body>
-<form name="myform" onsubmit="return validation()"> 
-<center><h1>FORM</h1></center>
+<form name="myform" onsubmit="validation()"> 
+<center><h1>Contact Form</h1></center>
 <center> 
    <p> 
       name
-      <input type = "text" id = "name" name="name"><br /><br>
+      <input type = "text" id = "name"><br /><br>
        
    	  
    	  email
-   	  <input type="text" name="email" value="email">
+   	  <input type="text" name="email">
    	  <br><br>
    	  
    	  address
-   	  <input type="text" name="address" value="address">
+   	  <input type="text" name="address">
    	  <br><br>
    	  
         mobile
-        <input type="text" name="mobile" value="mobile"><br><br>
+        <input type="text" name="mobile"><br><br>
       
       payment
        <select name="">
@@ -40,7 +65,7 @@ body {
        </select>
       <br><br>
         
-      <input type = "submit" value = "send"> 
+      <input type = "submit" value = "Submit" color="grey"> 
    </p> 
  </center>
 </form> 
