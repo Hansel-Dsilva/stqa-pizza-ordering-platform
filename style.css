@@ -6,7 +6,7 @@
 .hero{
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(28, 146, 42, 0.521)),url(pizza.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2),rgba(28, 146, 42, 0.521)),url(https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fpizza.jpg?v=1604507373821);
     background-position: center;
     background-size: cover;
     position: absolute;

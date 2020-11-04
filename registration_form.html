@@ -1,58 +1,99 @@
 <html>
-    <head>
-<title>Registration and Login Form</title>
-<link rel="stylesheet" href="style.css">
-<script type="text/javascript">
-
-</script>    
-</head>
-    <body>
-        <div class="hero">
-            <div class="form-box">
-                <div class="button-box">
-                    <div id="btn"></div>
-                    <button type="button" class="toggle-btn" onclick="login()">Log In</button>
-                    <button type="button" class="toggle-btn" onclick="Register()">Register</button>
-                </div>
-                <form id="Login" class="input-grp" action="index.html">
-                    <input type="text" class="input-feild" id="uname" placeholder="User ID" required>
-                    <input type="password" class="input-feild" id="pass" placeholder="Password" required>
-                    <input type="checkbox" class="checkbox1"><span>Remember Password</span>
-                    <button type="submit" class="submit-btn">Login</button>
-                    
-                </form>
-                <form id = "Register" class="input-grp1" >
-                    <input type="text" class="input-feild" placeholder="User ID" required>
-                    <input type="email" class="input-feild" placeholder="Email ID" required>
-                    <input type="number" class="input-feild" placeholder="Mobile No" required>
-                    <label for="pwd1">
-                    <input type="password" class="input-feild" id = "pwd1"  placeholder="Password" required>
-                    
-              
-                    <input type="password" class="input-feild" id= "pwd2"  placeholder="Confirm Password" required>
-                    <input type="checkbox" class="checkbox1"><span>I agree to terms and conditions</span>
-                    <button type="submit" class="submit-btn">Register</button>
-                    
-                </form>    
-            </div>
-            
+  <head>
+    <title>Registration and Login Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script type="text/javascript"></script>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="form-box">
+        <div class="button-box">
+          <div id="btn"></div>
+          <button type="button" class="toggle-btn" onclick="login()">
+            Log In
+          </button>
+          <button type="button" class="toggle-btn" onclick="Register()">
+            Register
+          </button>
         </div>
-        <script>
-            var x = document.getElementById("Login");
-            var y = document.getElementById("Register");
-            var z = document.getElementById("btn");
+        <form id="Login" class="input-grp" action="index.html">
+          <input
+            type="text"
+            class="input-feild"
+            id="uname"
+            placeholder="User ID"
+            required
+          />
+          <input
+            type="password"
+            class="input-feild"
+            id="pass"
+            placeholder="Password"
+            required
+          />
+          <input type="checkbox" class="checkbox1" /><span
+            >Remember Password</span
+          >
+          <button type="submit" class="submit-btn">Login</button>
+        </form>
+        <form id="Register" class="input-grp1" action="registration_form.html">
+          <input
+            type="text"
+            class="input-feild"
+            placeholder="User ID"
+            required
+          />
+          <input
+            type="email"
+            class="input-feild"
+            placeholder="Email ID"
+            required
+          />
+          <input
+            type="number"
+            class="input-feild"
+            placeholder="Mobile No"
+            required
+          />
+          <label for="pwd1">
+            <input
+              type="password"
+              class="input-feild"
+              id="pwd1"
+              placeholder="Password"
+              required
+            />
+          </label>
 
-            function Register(){
-                x.style.left = "-400px";
-                y.style.left = "50px";
-                z.style.left = "110px";
-            }
-            function login(){
-                x.style.left = "50px";
-                y.style.left = "450px";
-                z.style.left = "0";
-            }
-        </script>
-            
-    </body>
+          <input
+            type="password"
+            class="input-feild"
+            id="pwd2"
+            placeholder="Confirm Password"
+            required
+          />
+          <input type="checkbox" class="checkbox1" /><span
+            >I agree to terms and conditions</span
+          >
+          <button type="submit" class="submit-btn">Register</button>
+        </form>
+      </div>
+    </div>
+    <script>
+      var x = document.getElementById("Login");
+      var y = document.getElementById("Register");
+      var z = document.getElementById("btn");
+
+      function Register() {
+        x.style.left = "-400px";
+        y.style.left = "50px";
+        z.style.left = "110px";
+      }
+      function login() {
+        x.style.left = "50px";
+        y.style.left = "450px";
+        z.style.left = "0";
+      }
+    </script>
+  </body>
 </html>
