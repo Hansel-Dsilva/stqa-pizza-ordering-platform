@@ -76,14 +76,13 @@ body {
 }
 
 .btn {
-  margin-top: 30px;
   background: #2196F3;
-  padding: 12px;
+  padding: 12px 30px;
   text-align: center;
+  left: 140px;
   color: #f8f8f8;
   border-radius: 5px;
   cursor: pointer;
-  width= 100%;
 }
 
 .payment-logo {
