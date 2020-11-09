@@ -1,33 +1,19 @@
-# Welcome to Glitch
+![Pizza Ordering Platform](https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fstqa%20gif.gif?v=1604908864775)
 
-Click `Show` in the header to see your app live. Updates to your code will instantly deploy and update live.
+# Welcome to our Pizza Mania's Website
 
-**Glitch** is the friendly community where you'll build the app of your dreams. Glitch lets you instantly create, remix, edit, and host an app, bot or site, and you can invite collaborators or helpers to simultaneously edit code with you.
+- Main Parts of the website :
 
-Find out more [about Glitch](https://glitch.com/about).
+  - Home
+  - Menu
+  - Feedback
+  - About Us
+  - Terms & Conditions
+  - Register/Login
 
-## Your Project
+- It also contains 4 forms :
 
-### ← README.md
-
-That's this file, where you can tell people what your cool website does and how you built it.
-
-### ← index.html
-
-Where you'll write the content of your website.
-
-### ← style.css
-
-CSS files add styling rules to your content.
-
-### ← script.js
-
-If you're feeling fancy you can add interactivity to your site with JavaScript.
-
-### ← assets
-
-Drag in `assets`, like images or music, to add them to your project
-
-## Made by [Glitch](https://glitch.com/)
-
-\ ゜ o ゜)ノ
+  - Login
+  - Register
+  - Feedback
+  - Payment
