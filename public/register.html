@@ -1,3 +1,59 @@
+<!-- This is a static file -->
+<!-- served from your routes in server.js -->
+<!-- <!DOCTYPE html> -->
+<!-- <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A cool thing made with Glitch">
+
+    <title>Welcome to Glitch!</title>
+
+    <link id="favicon" rel="icon" href="https://glitch.com/edit/favicon-app.ico" type="image/x-icon"> -->
+<!-- import the webpage's stylesheet -->
+<!--     <link rel="stylesheet" href="/style.css"> -->
+
+<!-- import the webpage's client-side javascript file -->
+<!--     <script src="/client.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>
+        A Dream of the Future
+      </h1>
+    </header>
+
+    <main>
+      <p class="bold">Oh hi,</p>
+      
+      <p>Tell me your hopes and dreams:</p>
+      
+      <form>
+        <input name="dream" aria-label="a new dream" type="text" maxlength="100" placeholder="Dreams!">
+        <button type="submit" id="submit-dream">Submit Dream</button>
+      </form>
+      
+      <section class="dreams">
+        <ul id="dreams"></ul>
+        <button id="clear-dreams">
+          Clear Dreams
+        </button>
+      </section>
+      
+    </main>
+
+    <footer>
+      Made with <a href="https://glitch.com">Glitch</a>!
+    </footer>
+ -->
+<!-- include the Glitch button to show what the webpage is about and
+          to make it easier for folks to view source and remix -->
+<!--     <div class="glitchButton" style="position:fixed;top:20px;right:20px;"></div>
+    <script src="https://button.glitch.me/button.js" defer></script>
+  </body>
+</html> -->
+
 <html>
   <head>
     <title>Registration and Login Form</title>
@@ -6,6 +62,7 @@
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
     />
+    <script src="/client.js" defer></script>
   </head>
   <body>
     <div class="hero">
@@ -19,34 +76,38 @@
             Register
           </button>
         </div>
-        <form id="Login" class="input-grp" action="index.html">
+        <form id="Login" class="input-grp">
           <input
-            type="text"
+            type="email"
             class="input-feild"
-            id="uname"
-            placeholder="User ID"
+            id="login_email"
+            placeholder="Registered Email ID"
+            name="login_email"
             required
           />
           <input
             type="password"
             class="input-feild"
             id="pass"
+            name="pass"
             placeholder="Password"
             required
           />
-          <input type="checkbox" class="checkbox1" /><span
+          <input name="remember_me" type="checkbox" class="checkbox1" /><span
             >Remember Password</span
           >
           <button type="submit" class="submit-btn">Login</button>
         </form>
         <form id="Register" class="input-grp1">
           <input
+            id="user"
             type="text"
             class="input-feild"
-            placeholder="User ID"
+            placeholder="Full Name"
             required
           />
           <input
+            id="email"
             type="email"
             class="input-feild"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -57,8 +118,8 @@
             type="number"
             class="input-feild"
             minlength="10"
-                 size="10"
             placeholder="Mobile No"
+            id="ph_no"
             required
           />
           <label for="pwd1">
@@ -88,7 +149,11 @@
           <input type="checkbox" class="checkbox1" required /><span
             >I agree to terms and conditions</span
           >
-          <button type="submit" value="Submit" class="submit-btn">
+          <button
+            type="submit"
+            value="Submit"
+            class="submit-btn"
+          >
             Register
           </button>
         </form>
