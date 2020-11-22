@@ -200,6 +200,7 @@ background: transparent;
     border: 0;
     outline: none;
     border-radius: 50px;
+    margin-bottom: 15px;
 }
 .checkbox1{
     margin: 30px 10px 30px 0;

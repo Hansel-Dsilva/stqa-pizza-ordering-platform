@@ -59,10 +59,15 @@
     <title>Registration and Login Form</title>
     <link rel="stylesheet" href="style.css" />
     <link
+      rel="icon"
+      href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
+      type="image/icon type"
+    />
+    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
     />
-    <script src="/client.js" defer></script>
+    <script src="/register.js" defer></script>
   </head>
   <body>
     <div class="hero">
@@ -93,10 +98,19 @@
             placeholder="Password"
             required
           />
-          <input name="remember_me" type="checkbox" class="checkbox1" /><span
-            >Remember Password</span
-          >
+          <input name="remember_me" type="checkbox" class="checkbox1" />
+          Keep me logged in
           <button type="submit" class="submit-btn">Login</button>
+          <!--           <button type="submit"><a href="index.html" class="submit-btn">Home</a></button> -->
+          <div>
+            <button
+              type="button"
+              onclick="window.location='index.html';"
+              class="submit-btn"
+            >
+              Skip to Homepage
+            </button>
+          </div>
         </form>
         <form id="Register" class="input-grp1">
           <input
@@ -146,14 +160,9 @@
               required
           /></label>
 
-          <input type="checkbox" class="checkbox1" required /><span
-            >I agree to terms and conditions</span
-          >
-          <button
-            type="submit"
-            value="Submit"
-            class="submit-btn"
-          >
+          <input type="checkbox" class="checkbox1" required />
+        I agree to the Terms & Conditions
+          <button type="submit" value="Submit" class="submit-btn">
             Register
           </button>
         </form>
