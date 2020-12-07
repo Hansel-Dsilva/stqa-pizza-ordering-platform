@@ -43,10 +43,10 @@
   </style>
   <script src="/client.js" defer></script>
   <link
-      rel="icon"
-      href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
-      type="image/icon type"
-    />
+    rel="icon"
+    href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
+    type="image/icon type"
+  />
 </head>
 <div class="topnav shadow">
   <a href="/">Home</a>
@@ -80,7 +80,7 @@
 >
   We would love to hear from you!
 </h1>
-<form name="myform" action="index.html">
+<form id="feedback" name="myform" onsubmit="feedback_submit()">
   <input
     name="name"
     type="text"
@@ -99,3 +99,11 @@
   <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
   <input type="submit" value="SUBMIT" />
 </form>
+<script>
+  document.getElementById("feedback").onsubmit = event => {
+    // stop our form submission from refreshing the page
+    event.preventDefault();
+    alert("Your valuable feedback has been duly noted :)");
+    window.location = "index.html";
+  };
+</script>
