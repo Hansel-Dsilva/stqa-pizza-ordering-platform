@@ -6,12 +6,19 @@
       body {
         margin: 0;
         font-family: Arial, Helvetica, sans-serif;
-        /*         background-color: #824268; */
       }
 
       .topnav {
         overflow: hidden;
         background-color: #FF0000;
+        position: sticky;
+        top: 0;
+        right: 0;
+      }
+
+      .shadow {
+        position: sticky;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.75);
       }
 
       .topnav a {
@@ -41,6 +48,7 @@
       href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
       type="image/icon type"
     />
+    <script src="/client.js" defer></script>
   </head>
 
   <body bgcolor="white">
@@ -52,16 +60,31 @@
     <h1 style="color:red">
       <center id="welcome">Welcome To Pizza Mania</center>
     </h1>
-    <div class="topnav">
+    <div class="topnav shadow">
       <a href="/">Home</a>
       <a href="menu.html">Menu</a>
       <a href="feedback.html">Feedback</a>
       <a href="aboutus.html">About Us</a>
       <a href="termscon.html">Terms & Conditions</a>
-      <a href="register.html" id="login-btn" style="cursor:pointer;"
-        >Register/Login</a
-      >
+      <div style="float: right; padding: 0px 50px;">
+        <div
+          class="topnav"
+          id="loggedIn"
+          style="float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;"
+        >
+          Logged in:
+        </div>
+        <a href="register.html" id="login-btn" style="cursor:pointer;"
+          >Register/Login</a
+        >
+      </div>
     </div>
+
     <h2><center>Pizza Mania: Delivering Happiness</center></h2>
     <br />
     <h3>
@@ -104,24 +127,5 @@
         src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2F6c358d69-2818-4a55-9418-11c9923910cc.image.png?v=1604763886643"
       />
     </div>
-    <script>
-      window.addEventListener("DOMContentLoaded", event => {
-        console.log(sessionStorage.getItem("loggedInUsername"));
-        // If logged in, display logged-in user's name & replace "Login/Register" button with "Logout"
-        if (sessionStorage.getItem("loggedInUsername")) {
-          
-          document.getElementById("welcome").innerHTML +=
-            ", " + sessionStorage.getItem("loggedInUsername");
-
-          login_btn = document.getElementById("login-btn");
-          login_btn.text = "Logout";
-          login_btn.removeAttribute("href");
-          login_btn.onclick = () => {
-            sessionStorage.clear();
-            window.location.href = "/";
-          };
-        }
-      });
-    </script>
   </body>
 </html>

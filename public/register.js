@@ -67,7 +67,7 @@ reg_form.onsubmit = event => {
           break;
         case 2:
           alert("New user registered successfully. You may now Log In");
-          window.location.href = "/";
+          window.location.href = "register.html";
           break;
         default:
           console.log("Invalid status id: " + response.status_id);

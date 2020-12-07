@@ -11,21 +11,30 @@
       .topnav {
         overflow: hidden;
         background-color: #FF0000;
+        position: sticky;
+        top: 0;
+        right: 0;
       }
-      
-      .payh{
-        text-align:center;
-        padding:10px 16px;
-        background: #A8A8A8;
+
+      .shadow {
+        position: sticky;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.75);
+      }
+
+      .payh {
+        text-align: center;
+        padding: 10px 16px;
+        background: #CC6666;
         border-radius: 5px;
-        border:0;
-        cursor:pointer;
-        padding-top:10px;
-        padding-bottom:10px;
-        display:block;
-        margin:auto;
+        border: 0;
+        cursor: pointer;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        display: block;
+        margin: auto;
         font-family: "Montserrat", Arial, Helvetica, sans-serif;
-        
+        color: white;
+        font-size: 14px;
       }
 
       .topnav a {
@@ -53,6 +62,7 @@
       href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
       type="image/icon type"
     />
+    <script src="/client.js" defer></script>
   </head>
 
   <body bgcolor="white">
@@ -64,14 +74,31 @@
     <h1 style="color:red">
       <center id="welcome">Welcome To Pizza Mania</center>
     </h1>
-    <div class="topnav">
-      <a href="index.html">Home</a>
-      <a href="#">Menu</a>
+    <div class="topnav shadow">
+      <a href="/">Home</a>
+      <a href="menu.html">Menu</a>
       <a href="feedback.html">Feedback</a>
       <a href="aboutus.html">About Us</a>
       <a href="termscon.html">Terms & Conditions</a>
-      <a href="register.html">Register/Login</a>
+      <div style="float: right; padding: 0px 50px;">
+        <div
+          class="topnav"
+          id="loggedIn"
+          style="float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;"
+        >
+          Logged in:
+        </div>
+        <a href="register.html" id="login-btn" style="cursor:pointer;"
+          >Register/Login</a
+        >
+      </div>
     </div>
+
     <h1><center>MENU</center></h1>
     <table style="width:100%">
       <tr>
@@ -104,41 +131,82 @@
       </tr>
       <tr>
         <td>
-          <b><center>Rs.400</center></b>
+          <b
+            ><center>Price :Rs.<span id="per_price1">400</span></center></b
+          ><br />
+          <b
+            ><center>
+              Quantity:
+              <input
+                type="number"
+                min="1"
+                id="num1"
+                oninput="calc()"
+              /></center></b
+          ><br />
+          <b
+            ><center>Total: Rs.<span id="total_price1">400</span></center></b
+          >
         </td>
         <td>
-          <b><center>Rs.500</center></b>
+          <b
+            ><center>Price :Rs.<span id="per_price2">500</span></center></b
+          ><br />
+          <b
+            ><center>
+              Quantity:
+              <input
+                type="number"
+                min="1"
+                id="num2"
+                oninput="calc()"
+              /></center></b
+          ><br />
+          <b
+            ><center>Total: Rs.<span id="total_price2">500</span></center></b
+          >
         </td>
         <td>
-          <b><center>Rs.300</center></b>
+          <b
+            ><center>Price :Rs.<span id="per_price3">300</span></center></b
+          ><br />
+          <b
+            >Quantity:
+            <input type="number" min="1" id="num3" oninput="calc()"/></b
+          ><br />
+          <b
+            ><center>Total: Rs.<span id="total_price3">300</span></center></b
+          >
         </td>
       </tr>
       <tr></tr>
 
       <tr>
-        <td>
-          <b
-            ><center>
-              <button type="submit" class="payh"><a href="payment.html">Pay</a></button>
-            </center></b
-          >
-        </td>
-        <td>
-          <b
-            ><center>
-              <button type="submit" class="payh"><a href="payment.html">Pay</a></button>
-            </center></b
-          >
-        </td>
-        <td>
-          <b
-            ><center>
-              <button type="submit" class="payh"><a href="payment.html">Pay</a></button>
-            </center></b
-          >
-        </td>
+        <form action="address.html">
+          <td>
+            <b
+              ><center>
+                <button type="submit" class="payh">Order</button>
+              </center></b
+            >
+          </td>
+          <td>
+            <b
+              ><center>
+                <button type="submit" class="payh">Order</button>
+              </center></b
+            >
+          </td>
+          <td>
+            <b
+              ><center>
+                <button type="submit" class="payh">Order</button>
+              </center></b
+            >
+          </td>
+        </form>
       </tr>
-      <br>
+      <br />
       <tr>
         <th>BURGER PIZZA</th>
         <th>Sides & Beverages</th>
@@ -155,6 +223,7 @@
         <td>
           <center>
             <img
+              width="300"
               src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2F27105462-8212421-image-a-1_1586709026623-removebg-preview.png?v=1604729824460"
             />
           </center>
@@ -169,39 +238,117 @@
       </tr>
       <tr>
         <td>
-          <b><center>Rs.300</center></b>
+          <b
+            ><center>Price :Rs.<span id="per_price4">300</span></center></b
+          ><br />
+          <b
+            >Quantity:
+            <input type="number" min="1" id="num4" oninput="calc()"/><br
+          /></b>
+          <b
+            ><center>Total: Rs.<span id="total_price4">300</span></center></b
+          >
         </td>
         <td>
-          <b><center>Rs.400</center></b>
+          <b
+            ><center>Price :Rs.<span id="per_price5">345</span></center></b
+          ><br />
+          <b
+            ><center>
+              Quantity:
+              <input type="number" min="1" id="num5" oninput="calc()" />
+            </center>
+            <br
+          /></b>
+          <b
+            ><center>Total: Rs.<span id="total_price5">345</span></center></b
+          >
         </td>
         <td>
-          <b><center>Rs.300</center></b>
+          <b
+            ><center>Price :Rs.<span id="per_price6">225</span></center></b
+          ><br />
+          <b
+            ><center>
+              Quantity:
+              <input type="number" min="1" id="num6" oninput="calc()" />
+            </center>
+            <br
+          /></b>
+          <b
+            ><center>Total: Rs.<span id="total_price6">225</span></center></b
+          >
         </td>
       </tr>
       <tr>
-        <td>
-          <b
-            ><center>
-              <button type="submit" class="payh"><a href="payment.html">Pay</a></button>
-            </center></b
-          >
-        </td>
-        <td>
-          <b
-            ><center>
-              <button type="submit" class="payh"><a href="payment.html">Pay</a></button>
-            </center></b
-          >
-        </td>
-        <td>
-          <b
-            ><center>
-              <button type="submit" class="payh"><a href="payment.html">Pay</a></button>
-            </center></b>
-        </td>
+        <form action="address.html">
+          <td>
+            <b
+              ><center>
+                <button type="submit" class="payh">Order</button>
+              </center></b
+            >
+          </td>
+          <td>
+            <b
+              ><center>
+                <button type="submit" class="payh">Order</button>
+              </center></b
+            >
+          </td>
+          <td>
+            <b
+              ><center>
+                <button type="submit" class="payh">Order</button>
+              </center></b
+            >
+          </td>
+        </form>
       </tr>
     </table>
-    <br>
-    <br>
+
+    <br />
+    <br />
+    <script>
+      function calc() {
+        var amt1 = document.getElementById("num1").value;
+        var amt2 = document.getElementById("num2").value;
+        var amt3 = document.getElementById("num3").value;
+        var amt4 = document.getElementById("num4").value;
+        var amt5 = document.getElementById("num5").value;
+        var amt6 = document.getElementById("num6").value;
+        var price1 = document.getElementById("per_price1").innerHTML;
+        var price2 = document.getElementById("per_price2").innerHTML;
+        var price3 = document.getElementById("per_price3").innerHTML;
+        var price4 = document.getElementById("per_price4").innerHTML;
+        var price5 = document.getElementById("per_price5").innerHTML;
+        var price6 = document.getElementById("per_price6").innerHTML;
+        var i;
+        total1 = amt1 * price1;
+        total2 = amt2 * price2;
+        total3 = amt3 * price3;
+        total4 = amt4 * price4;
+        total5 = amt5 * price5;
+        total6 = amt6 * price6;
+        if (!isNaN(total1)) {
+          document.getElementById("total_price1").innerHTML = total1;
+        }
+        if (!isNaN(total2)) {
+          document.getElementById("total_price2").innerHTML = total2;
+        }
+        if (!isNaN(total3)) {
+          document.getElementById("total_price3").innerHTML = total3;
+        }
+        if (!isNaN(total4)) {
+          document.getElementById("total_price4").innerHTML = total4;
+        }
+        if (!isNaN(total5)) {
+          document.getElementById("total_price5").innerHTML = total5;
+        }
+        if (!isNaN(total6)) {
+          document.getElementById("total_price6").innerHTML = total6;
+        }
+      }
+    </script>
   </body>
 </html>
