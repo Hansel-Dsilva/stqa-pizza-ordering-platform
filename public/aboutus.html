@@ -11,6 +11,9 @@
       .topnav {
         overflow: hidden;
         background-color: #FF0000;
+        position: sticky;
+        top: 0;
+        right: 0;
       }
 
       .topnav a {
@@ -20,6 +23,11 @@
         padding: 14px 16px;
         text-decoration: none;
         font-size: 17px;
+      }
+
+      .shadow {
+        position: sticky;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.75);
       }
 
       .topnav a:hover {
@@ -33,6 +41,12 @@
       }
     </style>
     <title>Pizza Mania India</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
+      type="image/icon type"
+    />
+    <script src="/client.js" defer></script>
   </head>
 
   <body bgcolor="white">
@@ -41,15 +55,32 @@
       height="300"
       width="100%"
     />
-    <marquee><h1 style="color:red">Welcome To Pizza Mania</h1></marquee>
-    <div class="topnav">
-      <a href="index.html">Home</a>
+    <h1 style="color:red">
+      <center id="welcome">Welcome To Pizza Mania</center>
+    </h1>
+    <div class="topnav shadow">
+      <a href="/">Home</a>
       <a href="menu.html">Menu</a>
       <a href="feedback.html">Feedback</a>
-
-      <a href="#">About Us</a>
+      <a href="aboutus.html">About Us</a>
       <a href="termscon.html">Terms & Conditions</a>
-      <a href="registration_form.html">Register/Login</a>
+      <div style="float: right; padding: 0px 50px;">
+        <div
+          class="topnav"
+          id="loggedIn"
+          style="float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;"
+        >
+          Logged in:
+        </div>
+        <a href="register.html" id="login-btn" style="cursor:pointer;"
+          >Register/Login</a
+        >
+      </div>
     </div>
     <center><h1>Who are we?</h1></center>
     <p style="padding: 0 90px">
@@ -103,5 +134,14 @@
       is the most preferred pizza brand in India, given its freshest, tastiest
       and affordable Pizzas.
     </p>
+    <script>
+      window.addEventListener("DOMContentLoaded", event => {
+        if (document.cookie) {
+          document.getElementById("welcome").innerHTML +=
+            ", " + document.cookie;
+          document.getElementById("login-btn").text = "Logout";
+        }
+      });
+    </script>
   </body>
 </html>

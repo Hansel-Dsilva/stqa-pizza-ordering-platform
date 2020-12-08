@@ -11,6 +11,14 @@
       .topnav {
         overflow: hidden;
         background-color: #FF0000;
+        position: sticky;
+        top: 0;
+        right: 0;
+      }
+
+      .shadow {
+        position: sticky;
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.75);
       }
 
       .topnav a {
@@ -35,6 +43,12 @@
       }
     </style>
     <title>Pizza Mania</title>
+    <link
+      rel="icon"
+      href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
+      type="image/icon type"
+    />
+    <script src="/client.js" defer></script>
   </head>
 
   <body bgcolor="white">
@@ -43,16 +57,34 @@
       height="300"
       width="100%"
     />
-    <marquee><h1 style="color:red">Welcome To Pizza Mania</h1></marquee>
-    <div class="topnav">
-      <a href="index.html">Home</a>
+    <h1 style="color:red">
+      <center id="welcome">Welcome To Pizza Mania</center>
+    </h1>
+    <div class="topnav shadow">
+      <a href="/">Home</a>
       <a href="menu.html">Menu</a>
       <a href="feedback.html">Feedback</a>
       <a href="aboutus.html">About Us</a>
       <a href="termscon.html">Terms & Conditions</a>
-
-      <a href="registration_form.html">Register/Login</a>
+      <div style="float: right; padding: 0px 50px;">
+        <div
+          class="topnav"
+          id="loggedIn"
+          style="float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;"
+        >
+          Logged in:
+        </div>
+        <a href="register.html" id="login-btn" style="cursor:pointer;"
+          >Register/Login</a
+        >
+      </div>
     </div>
+
     <h2><center>Pizza Mania: Delivering Happiness</center></h2>
     <br />
     <h3>
@@ -66,26 +98,28 @@
     <div class="pizzapic">
       <h1><center>Our speciality</center></h1>
       <h2><center>Varieties of Pizzas</center></h2>
-      <img
-        src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fpepronni%20pizza.jpg?v=1604760409067"
-        height="250"
-        width="25%"
-      />
-      <img
-        src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2FBaked-No-Knead-Pan-Pizza.jpg?v=1604760400169"
-        height="250"
-        width="25%"
-      />
-      <img
-        src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fmexican-green-wave-.jpg?v=1604763347112"
-        height="250"
-        width="25%"
-      />
-      <img
-        src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fmargaritta.jpeg?v=1604763389341"
-        height="250"
-        width="320"
-      />
+      <a href="menu.html">
+        <img
+          src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fpepronni%20pizza.jpg?v=1604760409067"
+          height="250"
+          width="25%"
+        />
+        <img
+          src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2FBaked-No-Knead-Pan-Pizza.jpg?v=1604760400169"
+          height="250"
+          width="25%"
+        />
+        <img
+          src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fmexican-green-wave-.jpg?v=1604763347112"
+          height="250"
+          width="25%"
+        />
+        <img
+          src="https://cdn.glitch.com/799fa2f6-bf13-4ae4-b500-de8e5a32b3db%2Fmargaritta.jpeg?v=1604763389341"
+          height="250"
+          width="320"
+        />
+      </a>
     </div>
     <div class="home">
       <h2>home delivery</h2>

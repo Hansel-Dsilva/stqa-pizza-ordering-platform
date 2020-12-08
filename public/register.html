@@ -3,9 +3,15 @@
     <title>Registration and Login Form</title>
     <link rel="stylesheet" href="style.css" />
     <link
+      rel="icon"
+      href="https://cdn.glitch.com/ba84f0e6-8329-47e3-9c82-37956c377be6%2Fpizza-icon.ico?v=1605950368008"
+      type="image/icon type"
+    />
+    <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.4.2/css/all.css"
     />
+    <script src="/register.js" defer></script>
   </head>
   <body>
     <div class="hero">
@@ -19,34 +25,46 @@
             Register
           </button>
         </div>
-        <form id="Login" class="input-grp" action="index.html">
+        <form id="Login" class="input-grp">
           <input
-            type="text"
+            type="email"
             class="input-feild"
-            id="uname"
-            placeholder="User ID"
+            id="login_email"
+            placeholder="Registered Email ID"
+            name="login_email"
             required
           />
           <input
             type="password"
             class="input-feild"
             id="pass"
+            name="pass"
             placeholder="Password"
             required
           />
-          <input type="checkbox" class="checkbox1" /><span
-            >Remember Password</span
-          >
-          <button type="submit" class="submit-btn">Login</button>
+          <input name="remember_me" type="checkbox" class="checkbox1" />
+          Keep me logged in
+          <button id="login_submit" type="submit" class="submit-btn">Login</button>
+          <div>
+            <button
+              type="button"
+              onclick="window.location='index.html';"
+              class="submit-btn"
+            >
+              Skip to Homepage
+            </button>
+          </div>
         </form>
         <form id="Register" class="input-grp1">
           <input
+            id="user"
             type="text"
             class="input-feild"
-            placeholder="User ID"
+            placeholder="Full Name"
             required
           />
           <input
+            id="email"
             type="email"
             class="input-feild"
             pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
@@ -54,11 +72,12 @@
             required
           />
           <input
-            type="number"
-            class="input-feild"
-            minlength="10"
-                 size="10"
-            placeholder="Mobile No"
+            input type="text" 
+            placeholder="Phone Number" 
+             class= "input-feild"    
+          pattern="[7-9]{1}[0-9]{9}" 
+       title="Phone number with 7-9 and remaing 9 digit with 0-9"
+            id="ph_no"
             required
           />
           <label for="pwd1">
@@ -85,9 +104,8 @@
               required
           /></label>
 
-          <input type="checkbox" class="checkbox1" required /><span
-            >I agree to terms and conditions</span
-          >
+          <input type="checkbox" class="checkbox1" required />
+        I agree to the Terms & Conditions
           <button type="submit" value="Submit" class="submit-btn">
             Register
           </button>

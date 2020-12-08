@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400, 700);
 
 body {
-  background: rgb(30, 30, 40);
+  background: white;
 }
 form {
   max-width: 420px;
@@ -9,7 +9,7 @@ form {
 }
 
 .feedback-input {
-  color: white;
+/*   color: white; */
   font-family: Helvetica, Arial, sans-serif;
   font-weight: 500;
   font-size: 18px;
@@ -41,7 +41,7 @@ textarea {
   background: #CC6666;
   border-radius: 5px;
   border: 0;
-  cursor: pointer;
+  
   color: white;
   font-size: 24px;
   padding-top: 10px;
